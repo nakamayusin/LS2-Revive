@@ -1,0 +1,12 @@
+version: 2
+importPivots: 1
+tpsheetFileNames:
+- Assets/codeandweb.com/Example/Sprites/tiles.tpsheet
+- Assets/codeandweb.com/Example/Sprites/Tiles/tiles.tpsheet
+textureFileNames:
+- Assets/codeandweb.com/Example/Sprites/tiles.png
+- Assets/codeandweb.com/Example/Sprites/Tiles/tiles.png
+normalmapFileNames:
+- 
+- 
+enableDebugOutput: 0
