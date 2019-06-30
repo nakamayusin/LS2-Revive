@@ -12,9 +12,9 @@
 | 成員ID        | 工作內容   |
 | --------   | -----:  |
 | Subarashi     |Photon Server伺服器端(C#)   |
-|Nandi        |   bin,dat數據分析、圖檔地圖自動產生、效能優化   |
-| Karl        |   客戶端表現流程實作   |
-| tangpop2000        |   資料庫架構&分析   |
-| SiaoLina       |    資料庫架構&分析    |
-| EW      |    地圖完整化處理    |
+|Nandi        |   binary,dat數據分析、圖檔地圖自動產生、效能優化   |
+| Karl        |   客戶端表現流程實作(C#)   |
+| tangpop2000        |   資料庫架構&分析(MYSQL)   |
+| SiaoLina       |    資料庫架構&分析(MYSQL)    |
+| EW      |    地圖完整化處理(binary)    |
 | DC      |    遊戲資料彙整    |
