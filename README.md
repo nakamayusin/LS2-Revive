@@ -1,11 +1,11 @@
 ![](https://p2.bahamut.com.tw/B/ACG/c/13/0000002013.JPG)
 
 ### LifeStorm2 復活計畫
-版本：Unity 2019.1.6f1
-封包接口：Network資料夾內，已備註說明
-地圖位置：Resources\Maps
-主UI位置：Prefabs\UserInterface.prefab
-機房位置：美西GCP，台灣延遲約150ms
+版本：Unity 2019.1.6f1  
+封包接口：Network資料夾內，已備註說明  
+地圖位置：Resources\Maps  
+主UI位置：Prefabs\UserInterface.prefab  
+機房位置：美西GCP，台灣延遲約150ms  
 
 ### 成員表
 
