@@ -1,0 +1,15 @@
+lifestorm2_guide.djvu 為華義出版的樂園攻略本，會壓縮成 djvu 格式主要是因為他可以
+分層壓縮所以檔案比較小，PDF 未壓縮前為 1.26GB，PDF　壓縮後為 159 MB，未壓縮的 PDF
+500 dpi 轉成 djvu 只有 43MB
+
+DjVu 閱讀器
+
+WinDjView MacDjView 程式比較小巧不佔空間
+https://windjview.sourceforge.io
+
+iOS
+TotalReader - ePub, DjVu, MOBI, FB2 Reader
+https://apps.apple.com/us/app/totalreader-epub-djvu-mobi-fb2-reader/id832489932
+
+DjVuLibre 有各個作業系統的 DjVu 閱讀器
+http://djvu.sourceforge.net
