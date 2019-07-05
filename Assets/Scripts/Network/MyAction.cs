@@ -21,17 +21,12 @@ public partial class RunBehaviour
     /// <param name="inventory">背包內的道具</param>
     public void OnWorldEntered(Hashtable attr, Vector position, int dir, Hashtable gears, Hashtable inventory)
     {
-        // (int)attr[Attr.slots];  //-> 顯示出我的道具總格數
-
         //這個是裝備中的，登入時直接到裝備欄位上顯示
-        Wear(gears);
+        Inventory inv = Gui.GuiList[4].GetComponent<Inventory>();
+        inv.InitGears(gears);
 
-        ////要丟進背包內的已存在道具
-        //foreach (var it in inventory)
-        //{
-        //    Prop prop = JsonConvert.DeserializeObject<Prop>(it.Value.ToString());
-        //    BagUI.Add(prop.Index, prop);//還要依照 prop.Index 做排序
-        //}
+        //先產生道具格(依照格數)
+        inv.InitBag(inventory, (int)attr[Attr.slots]);
 
         Gui.GuiList[1].SetActive(false);
         Gui.GuiList[3].SetActive(true);
@@ -56,24 +51,6 @@ public partial class RunBehaviour
     }
 
     /// <summary>
-    /// 裝備穿著表現
-    /// </summary>
-    /// <param name="gears"></param>
-    void Wear(Hashtable gears)
-    {
-        Image nowSlot;
-        foreach (var gear in gears)
-        {
-            Prop prop = JsonConvert.DeserializeObject<Prop>(gear.Value.ToString());
-            nowSlot = Gui.GuiList[4].GetComponent<Inventory>().Gears[(int)gear.Key];
-
-            nowSlot.sprite = Gui.Images.Single(s => s.name == prop.Image.ToString());
-            nowSlot.color = new Color(1, 1, 1, 1);
-            nowSlot.SetNativeSize();
-        }
-    }
-
-    /// <summary>
     /// 丟棄物品到地板成功
     /// </summary>
     /// <param name="type">0=裝備中的物品、1=道具欄內的物品</param>
@@ -94,6 +71,18 @@ public partial class RunBehaviour
     }
 
     /// <summary>
+    /// 拾取物品成功，加到背包
+    /// </summary>
+    /// <param name="json"></param>
+    /// <param name="index"></param>
+    public void OnPropPickedUp(string json, int index)
+    {
+        Prop prop = JsonConvert.DeserializeObject<Prop>(json);
+
+        Gui.GuiList[4].GetComponent<Inventory>().AddProp(index, prop);
+    }
+
+    /// <summary>
     /// 未來作用於千里眼  遠距離偵查通緝犯或某人，暫時無視
     /// </summary>
     /// <param name="itemId"></param>
@@ -106,5 +95,9 @@ public partial class RunBehaviour
         //r.OnRadarUpdate(itemId, itemType, position);
     }
 
+    public void OnBagSorted(Hashtable inventory)
+    {
+        Gui.GuiList[4].GetComponent<Inventory>().InitBag(inventory, (int)game.Avatar.attr[Attr.slots]);
+    }
 
 }

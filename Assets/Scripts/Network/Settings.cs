@@ -4,7 +4,7 @@
     {
         Settings result = new Settings
         {
-            ServerAddress = "35.236.31.96:5061"
+            ServerAddress = "127.0.0.1:5061"
         };
         return result;
     }

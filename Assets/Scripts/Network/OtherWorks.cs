@@ -61,6 +61,8 @@ public partial class RunBehaviour
     {
         GroundProp propObj = Instantiate(Resources.Load("GroundProp") as GameObject).GetComponent<GroundProp>();
 
+        propObj.gameObject.name = "Item_" + item.Id;
+
         var sprite = Gui.Images.Single(s => s.name == item.attr[Attr.modelID].ToString());
 
         var pos = Maps[(int)MapType.map].layoutGrid.CellToWorld(new Vector3Int((int)item.Position.X, (int)item.Position.Y, 0));
